@@ -27,3 +27,4 @@ Crystal - API calls and data collection
 Mark - JS logic and dynamic elemnt generation
 
 
+Wireframes are located in the Documentation directory of the repository
