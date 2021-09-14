@@ -25,3 +25,5 @@ THEN I am presented with current weather and music playlist reccomendations base
 Misty - UI/UX front end layout
 Crystal - API calls and data collection
 Mark - JS logic and dynamic elemnt generation
+
+
