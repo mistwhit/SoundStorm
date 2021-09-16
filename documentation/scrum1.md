@@ -6,6 +6,8 @@ Where are we now?
 What is the next milestone?
 1) Crystal - add API data to index.htm
 2) Mark - set schedule for meetings
-Blockers?
 3) Misty - Create innerHTML divs and outlining framework of main page
+
+
+Blockers?
 
