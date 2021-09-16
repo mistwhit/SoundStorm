@@ -120,3 +120,47 @@ body {
     margin-top: 10px;
   }
 }
+
+.wrapper {
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 10px;
+}
+
+.column1 {
+  background: var(--text_light);
+  color: var(--text_med);
+  height: 100px;
+  border: black;
+  padding: 40px 10%;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75rem;
+  letter-spacing: 0.1em;
+}
+
+.column2 {
+  background: var(--text_light);
+  color: var(--text_med);
+  height: 100px;
+  border: black;
+  padding: 40px 10%;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75rem;
+  letter-spacing: 0.1em;
+}
