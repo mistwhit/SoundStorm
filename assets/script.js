@@ -107,6 +107,7 @@ function UVIndex(ln, lt) {
   });
 }
 //begin removal of my test logic
+//adding lines to test merge
 var formEl = $('#user-zip');
 var zipInputEl = $('#zip-number');
 
