@@ -142,7 +142,7 @@ body {
 .column1 {
   background: var(--text_light);
   color: var(--text_med);
-  height: 100px;
+  overflow: auto;
   border: black;
   padding: 40px 10%;
   border-radius: 20px;
@@ -155,7 +155,7 @@ body {
 .column2 {
   background: var(--text_light);
   color: var(--text_med);
-  height: 100px;
+  overflow: auto;
   border: black;
   padding: 40px 10%;
   border-radius: 20px;

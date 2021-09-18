@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css" />
     <title>SoundStorm</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    Demo Project
+    I made a quick little demo project so you can see it at work. See the deployed project to actually see the favicons. That works in Firefox and Chrome. Safari only does those “mask” style icons in SVG so this doesn’t work there. Maybe it could though? I dunno I’ll let you try it.
+    
+    Here’s a video in case you just wanna see it.
+    
+    Related Concepts
+    Ada Rose Cannon added a badge that can increment.
+    Taylor Hunt dropped some code on how he uses the current Git branch name to create an SVG favicon (related to the “different favicon for development” idea)
+    You could duck a prefers-color-scheme media query in the SVG if you wanted to do something special for dark mode (although emojis generally work well on any background)
+    OUR LEARNING PARTNER
+    Frontend Masters logo
+    Frontend Masters
+    Wanna learn SVG & Animation deeply?
+    Frontend Masters has an incredible course on all things CSS and SVG animation from CSS-Tricks own Sarah Drasner. Sarah comprehensively covers the possibilty of animation, the tools, an
 </head>
 <body>
 <main>
   <section class="top-banner">
     <div class="container">
       <!-- Heading -->
-      <h1 class="heading">SoundStorm</h1>
+      <h1 class="heading">⚡SoundStorm</h1>
       <!-- Search Form -->
-      <form id="user-zip">
-        <input type="text" placeholder="Where are you now?" id="zip-number" >
+      <form id="search-city">
+        <input type="text" placeholder="Where are you now?" id="search-city" >
         <button type="submit">SUBMIT</button>
         <span class="msg"></span>
       </form>
@@ -27,7 +42,7 @@
       <!-- Weather -->
       <div class='column'>
         <div class='column1'>
-          Weather
+
           <!-- Retrieved weather data will be dumped here -->
           <div class="city"></div>
           <div class="wind"></div>
@@ -35,49 +50,49 @@
           <div class="temp"></div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        // This is our API key
-        var APIKey = "166a433c57516f51dfab1f7edaed8413";
+        <script type="text/javascript">
+          // This is our API key
+          var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
-        // Here we are building the URL we need to query the database
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-            "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
+          // Here we are building the URL we need to query the database
+          var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+          "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
 
-        // Here we run our AJAX call to the OpenWeatherMap API
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-            // We store all of the retrieved data inside of an object called "response"
-            .then(function (response) {
+          // Here we run our AJAX call to the OpenWeatherMap API
+          $.ajax({
+          url: queryURL,
+          method: "GET"
+          })
+          // We store all of the retrieved data inside of an object called "response"
+          .then(function (response) {
 
-                // Log the queryURL
-                console.log(queryURL);
+          // Log the queryURL
+          console.log(queryURL);
 
-                // Log the resulting object
-                console.log(response);
+          // Log the resulting object
+          console.log(response);
 
-                // Transfer content to HTML
-                $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-                $(".wind").text("Wind Speed: " + response.wind.speed);
-                $(".humidity").text("Humidity: " + response.main.humidity);
-                $(".temp").text("Temperature (F) " + response.main.temp);
+          // Transfer content to HTML
+          $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+          $(".wind").text("Wind Speed: " + response.wind.speed);
+          $(".humidity").text("Humidity: " + response.main.humidity);
+          $(".temp").text("Temperature (F) " + response.main.temp);
 
-                // Log the data in the console as well
-                console.log("Wind Speed: " + response.wind.speed);
-                console.log("Humidity: " + response.main.humidity);
-                console.log("Temperature (F): " + response.main.temp);
-            });
-    </script> 
-  
-  <!-- Music -->
-  <div class='column'>
-    <div class='column2'>
-      Music
+          // Log the data in the console as well
+          console.log("Wind Speed: " + response.wind.speed);
+          console.log("Humidity: " + response.main.humidity);
+          console.log("Temperature (F): " + response.main.temp);
+          });
+        </script> 
+        <!-- Music -->
+        <div class='column'>
+          <div class='column2'>
+          Music
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 </main>
 
 <!-- Footer Will Go Here -->
