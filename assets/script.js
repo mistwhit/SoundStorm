@@ -106,8 +106,12 @@ function UVIndex(ln, lt) {
     $(currentUvindex).html(response.value);
   });
 }
+<<<<<<< HEAD
 //begin removal of my test logic
 //adding lines to test merge
+=======
+
+>>>>>>> f1ee0cd0b9cfecee57036eacbc02eadeed40d2a2
 var formEl = $('#user-zip');
 var zipInputEl = $('#zip-number');
 
