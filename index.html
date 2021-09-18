@@ -8,23 +8,31 @@
     <title>SoundStorm</title>
 </head>
 <body>
+<main>
+  <section class="top-banner">
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="heading">SoundStorm</h1>
+      <!-- Search Form -->
+      <form id="user-zip">
+        <input type="text" placeholder="Where are you now?" id="zip-number" >
+        <button type="submit">SUBMIT</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
 
-    <section class="top-banner">
-        <div class="container">
-        <!-- Heading -->
-          <h1 class="heading">SoundStorm</h1>
-        <!-- Search Form -->
-
-          <form>
-            <input type="text" placeholder="What's your zip code?">
-            <button type="submit">SUBMIT</button>
-            <span class="msg"></span>
-          </form>
-        <!-- Retrieved data will be dumped here -->
+  <section class='wrapper'>
+    <div class='row'>
+      <!-- Weather -->
+      <div class='column'>
+        <div class='column1'>
+          Weather
+          <!-- Retrieved weather data will be dumped here -->
           <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div>
+          <div class="wind"></div>
+          <div class="humidity"></div>
+          <div class="temp"></div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -61,43 +69,25 @@
                 console.log("Temperature (F): " + response.main.temp);
             });
     </script> 
-      </section>
-      
+  
+  <!-- Music -->
+  <div class='column'>
+    <div class='column2'>
+      Music
+    </div>
+  </div>
+</div>
+</section>
+</main>
 
+<!-- Footer Will Go Here -->
+<footer>
+  <!-- Team Name, Logo, Year Built, Other Links, Etc. -->
+</footer>
 
-          <form class="form">
-            <input type="text" placeholder="What's your zip code?">
+<!-- Links -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+<script type="text/javascript" src="./assets/script.js"></script>
 
-          <form id="user-zip">
-            <input type="text" placeholder="What's your zip code?" id="zip-number" >
-
-            <button type="submit">SUBMIT</button>
-            <span class="msg"></span>
-          </form>
-        </div>
-
-    </section>
-
-    <section class='wrapper'>
-        <div class='row'>
-          <div class='column'>
-            <div class='column1'>
-              Weather
-            </div>
-          </div>
-          <div class='column'>
-            <div class='column2'>
-              Music
-            </div>
-          </div>
-        </div>
-    </section>
-      
-
-      </section>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
-
-
-    <script type="text/javascript" src="./assets/script.js"></script> 
 </body>
 </html>

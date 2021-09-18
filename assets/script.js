@@ -106,7 +106,7 @@ function UVIndex(ln, lt) {
     $(currentUvindex).html(response.value);
   });
 }
-=======
+
 var formEl = $('#user-zip');
 var zipInputEl = $('#zip-number');
 
