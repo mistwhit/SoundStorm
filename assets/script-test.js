@@ -58,6 +58,7 @@ function currentWeather(city) {
       console.log(response);
       //Dta object from server side Api for icon property.
       var weathericon = response.weather[0].icon;
+      console.log(weathericon);
       var iconurl =
         "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
       // The date format method is taken from the  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
