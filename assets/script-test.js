@@ -106,20 +106,19 @@ function UVIndex(ln, lt) {
     $(currentUvindex).html(response.value);
   });
 }
-//TODO: Move jQuery variable declarations to top of sciprt and check them against index elements
-var formEl = $('#user-zip');
-var zipInputEl = $('#zip-number');
+//BEGIN MARK ADDITION
 
 
-formEl.on('submit', handleFormSubmit);
 
-var handleFormSubmit = function (event) {
-    event.preventDefault();
+searchCity.eventHandler('submit', displayWeather);
+
+//var handleFormSubmit = function (event) {
+  //  event.preventDefault();
   
-    var zipInput = zipInputEl.val();
-    zipInputEl.val('');
-    console.log(zipInputEl.val());
-}
+  //  var zipInput = zipInputEl.val();
+  //  zipInputEl.val('');
+  //  console.log(zipInputEl.val());
+//}
 //console.log(zipInput);
   
 /*     if (!zipInput || !dateInput) {
