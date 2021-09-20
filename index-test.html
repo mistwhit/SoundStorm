@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>SoundStorm</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+<main>
+  <section class="top-banner">
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="heading">⚡SoundStorm</h1>
+      <!-- Search Form -->
+      <form id="search-city">
+          <!--test id change-->
+        <input name = "city" type="text" placeholder="Where are you now?" id="current-city" >
+        <button type="submit">SUBMIT</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+
+  <section class='wrapper'>
+    <div class='row'>
+      <!-- Weather -->
+      <div class='column'>
+        <div class='column1'>
+
+          <!-- Retrieved weather data will be dumped here -->
+          <div class="city"></div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+    <div class="temp"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+          // This is our API key
+          var APIKey = "166a433c57516f51dfab1f7edaed8413";
+
+          // Here we are building the URL we need to query the database
+          var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+          "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
+
+          // Here we run our AJAX call to the OpenWeatherMap API
+          $.ajax({
+          url: queryURL,
+          method: "GET"
+          })
+          // We store all of the retrieved data inside of an object called "response"
+          .then(function (response) {
+
+          // Log the queryURL
+          console.log(queryURL);
+
+          // Log the resulting object
+          console.log(response);
+
+          // Transfer content to HTML
+          $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+          $(".wind").text("Wind Speed: " + response.wind.speed);
+          $(".humidity").text("Humidity: " + response.main.humidity);
+          $(".temp").text("Temperature (F) " + response.main.temp);
+
+          // Log the data in the console as well
+          console.log("Wind Speed: " + response.wind.speed);
+          console.log("Humidity: " + response.main.humidity);
+          console.log("Temperature (F): " + response.main.temp);
+          });
+        </script> 
+        <!-- Music -->
+        <div class='column'>
+          <div class='column2'>
+          Music
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Will Go Here -->
+<footer>
+  <!-- Footer Information and links. -->
+</footer>
+
+<!-- Links -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+
+<!--<script type="text/javascript" src="./assets/script.js"></script>
+loaded test script
+-->
+
+    <script type="text/javascript" src="./assets/script-test.js"></script> 
+</body>
+</html>
