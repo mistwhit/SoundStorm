@@ -164,3 +164,21 @@ body {
   font-size: 1.75rem;
   letter-spacing: 0.1em;
 }
+
+footer {
+  color: var(--text_light);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.teamName {
+  padding: 10px;
+}
+
+.GitHub {
+  display: block;
+  margin-left: auto;
+  margin-right: auto }
