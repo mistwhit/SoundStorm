@@ -100,7 +100,7 @@ function currentWeather(city) {
           }
         }
             //test dynamic html
-    $(".city-ico").html("<img src=" + iconurl + ">");        
+    $(".city-ico").html("<img src=" + iconurl + ">").css("background","blue");        
     $(".city").html("<h1>" + city + " Weather Details</h1>");
     $(".wind").text("Wind Speed: " + response.wind.speed);
     $(".humidity").text("Humidity: " + response.main.humidity);
