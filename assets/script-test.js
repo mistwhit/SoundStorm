@@ -14,7 +14,8 @@ var currentTemperature = $("#temperature");
 var currentHumidty = $("#humidity");
 var currentWSpeed = $("#wind-speed");
 var currentUvindex = $("#uv-index");
-var sCity = [];
+
+
 // searches the city to see if it exists in the entries from the storage
 function find(c) {
   for (var i = 0; i < sCity.length; i++) {
@@ -82,7 +83,7 @@ function currentWeather(city) {
       // Display UVIndex.
       //By Geographic coordinates method and using appid and coordinates as a parameter we are going build our uv query url inside the function below.
       UVIndex(response.coord.lon, response.coord.lat);
-      forecast(response.id);
+      //forecast(response.id);
       if (response.cod == 200) {
         sCity = JSON.parse(localStorage.getItem("cityname"));
         console.log(sCity);
@@ -98,8 +99,15 @@ function currentWeather(city) {
             addToList(city);
           }
         }
+            //test dynamic html
+    $(".city-ico").html("<img src=" + iconurl + ">");        
+    $(".city").html("<h1>" + city + " Weather Details</h1>");
+    $(".wind").text("Wind Speed: " + response.wind.speed);
+    $(".humidity").text("Humidity: " + response.main.humidity);
+    $(".temp").text("Temperature (F) " + response.main.temp);
       }
     });
+
 }
 // This function returns the UVIindex response.
 function UVIndex(ln, lt) {
