@@ -52,6 +52,19 @@ body {
   color: var(--text_light);
 }
  
+div.form-group{
+
+  background: var(--text_light);
+  color: var(--text_med);
+  height: 100px;
+  border: black;
+  padding: 40px 10%;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75rem;
+  letter-spacing: 0.1em;
+}
 .heading {
   font-weight: bold;
   font-size: 4rem;
@@ -86,7 +99,7 @@ body {
   background: var(--red);
   transition: background 0.3s ease-in-out;
 }
- 
+
 .top-banner form button:hover {
   background: var(--darkred);
 }
@@ -97,28 +110,6 @@ body {
   left: 0;
   max-width: 450px;
   min-height: 40px;
-}
- 
-@media screen and (max-width: 700px) {
-  .top-banner form {
-    flex-direction: column;
-  }
-   
-  .top-banner form input,
-  .top-banner form button {
-    width: 100%;
-  }
- 
-  .top-banner form button {
-    margin: 20px 0 0 0;
-  }
-   
-  .top-banner form .msg {
-    position: static;
-    max-width: none;
-    min-height: 0;
-    margin-top: 10px;
-  }
 }
 
 .wrapper {
@@ -164,3 +155,49 @@ body {
   font-size: 1.75rem;
   letter-spacing: 0.1em;
 }
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body {
+    
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+h3{
+    font-weight: bold;
+}
+.forecast{
+    
+    font-size: 0.9em;
+}
+span{
+    font-size: 1em;
+}
+li:hover{
+    background-color: lightslategray;
+    text-decoration: underline;
+}
+@media screen and (max-width: 700px) {
+  .top-banner form {
+    flex-direction: column;
+  }
+}
+  .top-banner form input,
+  .top-banner form button {
+    width: 100%;
+  }
+ 
+  .top-banner form button {
+    margin: 20px 0 0 0;
+  }
+   
+  .top-banner form .msg {
+    position: static;
+    max-width: none;
+    min-height: 0;
+    margin-top: 10px;
+  }
