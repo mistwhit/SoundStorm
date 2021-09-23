@@ -168,10 +168,6 @@ body {
 footer {
   color: var(--text_light);
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
 }
 
 .teamName {
@@ -180,5 +176,12 @@ footer {
 
 .GitHub {
   display: block;
-  margin-left: auto;
-  margin-right: auto }
+  margin: 0 auto;
+  text-align: center;
+ }
+ 
+  .city-ico {
+  background-color: var(--text_light);
+  display: inline-block;
+  margin: 0 auto;
+  }
