@@ -1,4 +1,15 @@
-           //Declare a variable to store the searched city
+  //global variables
+let playlistOptions = {
+  Sunny: "pop",
+  Clear: "workout",
+  Thunder: "indie_alt",
+  Hail: "toplists",
+  Snow: "sleep",
+  Sleet: "hiphop",
+  Cloudy: "country",
+};
+
+  //Declare a variable to store the searched city
 var city = "";
 // variable declaration
 var searchCity = $("#search-city");
