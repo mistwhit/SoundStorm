@@ -3,6 +3,7 @@
 //var city = "";
 // variable declaration
 //
+var data = ''
 var searchCity = document.querySelector("#search-city");
 //
 var searchButton = $("#search-button");
@@ -127,7 +128,40 @@ function UVIndex(ln, lt) {
   });
 }
 //BEGIN MARK ADDITION
+//TODO capture token in JSON object and use it to pass queries to spotify
+//get Spotify Auth token
+// var spotifyAuthURL = '"POST" -H "Authorization: Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU=" -d grant_type=client_credentials https://accounts.spotify.com/api/token'
+// spotifyToken = fetch(spotifyAuthURL);
+// console.log(spotifyToken.access_token);
 
+function getToken() {
+
+  //const result = 
+  fetch('https://accounts.spotify.com/api/token', {
+      method: 'POST',
+      headers: {
+          //'Content-Type' : 'application/x-www-form-urlencoded', 
+          'Authorization' : 'Basic Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU='
+      },
+      body: 'grant_type=client_credentials'
+  })
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
+}
+getToken();  
+
+//   const data = await result.json();
+//   return data.access_token;
+// }
+// getToken();
+// console.log(data.access_token);
+
+
+//end MARK ADDITION
 
 
 searchCity.addEventListener('submit', displayWeather);
