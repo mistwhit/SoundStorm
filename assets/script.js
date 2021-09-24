@@ -190,7 +190,7 @@ fetch('https://accounts.spotify.com/api/token', {
 searchCity.addEventListener('submit', displayWeather);
 
   }
-
+//TODO: add spotify search query
   getToken();
   console.log(authToken);
  
