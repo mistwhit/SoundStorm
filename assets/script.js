@@ -137,22 +137,35 @@ function UVIndex(ln, lt) {
 function getToken() {
 
   //const result = 
-  fetch('https://accounts.spotify.com/api/token', {
-      method: 'POST',
-      headers: {
-          //'Content-Type' : 'application/x-www-form-urlencoded', 
-          'Authorization' : 'Basic Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU='
-      },
-      body: 'grant_type=client_credentials'
-  })
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+//   fetch('https://accounts.spotify.com/api/token', {
+//       method: 'POST',
+//       headers: {
+//           'Content-Type' : 'application/x-www-form-urlencoded', 
+//           'Authorization' : 'Basic Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU='
+//       },
+//       body: 'grant_type=client_credentials'
+//   })
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//   });
+// }
+// getToken();  
+
+fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU=',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
+    body: 'grant_type=client_credentials'
+})
+.then(response => response.json())
+.then(data => {
     console.log(data);
-  });
-}
-getToken();  
+});
 
 //   const data = await result.json();
 //   return data.access_token;
@@ -179,4 +192,5 @@ searchCity.addEventListener('submit', displayWeather);
       console.log('You need to fill out the form!');
       return;
     } */
-
+  }
+getToken();
