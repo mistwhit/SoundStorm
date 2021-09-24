@@ -96,7 +96,7 @@ input {
   background: var(--light);
   color: var(--medium);
   overflow: auto;
-  border: black;
+  border: var(--dark);
   padding: 40px 10%;
   border-radius: 20px;
   text-align: center;
