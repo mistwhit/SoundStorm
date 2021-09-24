@@ -35,7 +35,8 @@ method: "GET"
 //var city = "";
 // variable declaration
 //
-var data = ''
+var data = '';
+var authToken = '';
 var searchCity = document.querySelector("#search-city");
 //
 var searchButton = $("#search-button");
@@ -64,7 +65,7 @@ function find(c) {
 function displayWeather(event) {
   console.log("called displayWeather");
   //var city = currentCity.value().trim();
-  
+
   event.preventDefault();
   if (currentCity.value.trim() !== "") {
     var city = currentCity.value.trim();
@@ -168,24 +169,6 @@ function UVIndex(ln, lt) {
 
 function getToken() {
 
-  //const result = 
-//   fetch('https://accounts.spotify.com/api/token', {
-//       method: 'POST',
-//       headers: {
-//           'Content-Type' : 'application/x-www-form-urlencoded', 
-//           'Authorization' : 'Basic Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU='
-//       },
-//       body: 'grant_type=client_credentials'
-//   })
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   });
-// }
-// getToken();  
-
 fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -196,33 +179,18 @@ fetch('https://accounts.spotify.com/api/token', {
 })
 .then(response => response.json())
 .then(data => {
-    console.log(data);
+    console.log(data.access_token);
+    authToken = data.access_token;
+    return authToken;
 });
-
-//   const data = await result.json();
-//   return data.access_token;
-// }
-// getToken();
-// console.log(data.access_token);
-
 
 //end MARK ADDITION
 
 
 searchCity.addEventListener('submit', displayWeather);
 
-//var handleFormSubmit = function (event) {
-  //  event.preventDefault();
-  
-  //  var zipInput = zipInputEl.val();
-  //  zipInputEl.val('');
-  //  console.log(zipInputEl.val());
-//}
-//console.log(zipInput);
-  
-/*     if (!zipInput || !dateInput) {
-      console.log('You need to fill out the form!');
-      return;
-    } */
   }
-getToken();
+//TODO: add spotify search query
+  getToken();
+  console.log(authToken);
+ 
