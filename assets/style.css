@@ -96,7 +96,7 @@ input {
   background: var(--light);
   color: var(--medium);
   overflow: auto;
-  border: black;
+  border: var(--dark);
   padding: 40px 10%;
   border-radius: 20px;
   text-align: center;
@@ -104,6 +104,7 @@ input {
   font-size: 1.75rem;
   letter-spacing: 0.1em;
   margin: 25px;
+  width: fit-content;
 }
 
 /* Weather Icon */
