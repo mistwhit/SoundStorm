@@ -104,7 +104,13 @@ input {
   font-size: 1.75rem;
   letter-spacing: 0.1em;
   margin: 25px;
-  width: fit-content;
+  min-width: 750px;
+}
+
+@media screen and (max-width: 600px) {
+  .weather, .music {
+    min-width: 250px;
+  }
 }
 
 /* Weather Icon */
