@@ -37,13 +37,12 @@ method: "GET"
 //
 var data = '';
 var authToken = '';
+var spotToken = '';
 var searchCity = document.querySelector("#search-city");
-//
+var tracksContainer = document.querySelector('#tracks');
 var searchButton = $("#search-button");
 var clearButton = $("#clear-history");
-//
 var currentCity = document.querySelector("#current-city");
-//
 var currentTemperature = $("#temperature");
 var currentHumidty = $("#humidity");
 var currentWSpeed = $("#wind-speed");
@@ -161,11 +160,6 @@ function UVIndex(ln, lt) {
   });
 }
 //BEGIN MARK ADDITION
-//TODO capture token in JSON object and use it to pass queries to spotify
-//get Spotify Auth token
-// var spotifyAuthURL = '"POST" -H "Authorization: Basic Yzk2MTBiMWUxMWNhNGU1YjgzYTFjZWI2N2EyZWZlZDI6ZTE2OGJiZmU1MTA1NDhkMWFjMzBmYjBkNzU1NzM1NWU=" -d grant_type=client_credentials https://accounts.spotify.com/api/token'
-// spotifyToken = fetch(spotifyAuthURL);
-// console.log(spotifyToken.access_token);
 
 function getToken() {
 
@@ -180,7 +174,28 @@ fetch('https://accounts.spotify.com/api/token', {
 .then(response => response.json())
 .then(data => {
     console.log(data.access_token);
+    console.log(data);
     authToken = data.access_token;
+    console.log(authToken);
+    //build track query
+    //TODO Build dynamic fetch URL
+ //var trackURL = 
+ fetch('https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT',{
+   method: 'GET',
+   headers: {
+    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer '+authToken
+   },
+   //body: grant_type
+ })
+ .then(response => response.json())
+ .then(data => {
+   console.log(data);
+   console.log(data.danceability);
+   $(".tracks").html("Track Danceability: " + data.danceability);
+ })
+  
     return authToken;
 });
 
@@ -191,6 +206,19 @@ searchCity.addEventListener('submit', displayWeather);
 
   }
 //TODO: add spotify search query
-  getToken();
-  console.log(authToken);
+function displayTracks(tracksContainer){
+for (let i = 0; i < 5; i++) {
+  var j = i+1
+  var track = document.createElement('h4')
+  track.textContent = 'Track '+(j);
+  console.log('Track '+(j));
+  console.log(track.textContent);
+  $(".tracks").text(track.textContent);
+  tracksContainer.text(track.textContent);
+}
+}
+
+getToken();
+displayTracks(tracksContainer);
+console.log(spotToken);
  
