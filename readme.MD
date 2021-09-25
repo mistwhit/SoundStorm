@@ -1,6 +1,6 @@
-SMU Project 1 "SoundStorm"
+# SMU Project 1 "SoundStorm"
 
-Description 
+## Description 
 
 This site will use weather data from a user provided location (zipcode) to generate a playlist and show a map of nearby live music events.
 
@@ -18,6 +18,7 @@ SO THAT I can get a suggested playlist
 GIVEN user input of their location AND music preference
 WHEN I submit my location
 THEN I am presented with current weather and music playlist reccomendations based on current conditions and forecast as well as the location of nearby live muisic events.
+```
 
 ## Project Assignments
 
@@ -28,3 +29,11 @@ Mark - JS logic and dynamic elemnt generation
 
 
 Wireframes are located in the Documentation directory of the repository
+
+## Screenshots
+![Screenshot of Sound Storm](./assets/images/screenshot1.png)
+![Screenshot of Sound Storm](./assets/images/screenshot2.png)
+
+## Link
+https://mjs-esfsc.github.io/SoundStorm/
+
