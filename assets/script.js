@@ -192,6 +192,8 @@ fetch('https://accounts.spotify.com/api/token', {
  .then(response => response.json())
  .then(data => {
    console.log(data);
+   console.log(data.danceability);
+   $(".tracks").html("Track Danceability: " + data.danceability);
  })
   
     return authToken;
@@ -211,7 +213,7 @@ for (let i = 0; i < 5; i++) {
   track.textContent = 'Track '+(j);
   console.log('Track '+(j));
   console.log(track.textContent);
-  $(".tracks").text(track.textContent);
+  //$(".tracks").text(track.textContent);
   //tracksContainer.append(track.textContent);
 }
 }
