@@ -39,7 +39,7 @@ var data = '';
 var authToken = '';
 var spotToken = '';
 var searchCity = document.querySelector("#search-city");
-var tracksContainer = document.getElementById('#tracks');
+var tracksContainer = document.querySelector('#tracks');
 var searchButton = $("#search-button");
 var clearButton = $("#clear-history");
 var currentCity = document.querySelector("#current-city");
@@ -206,19 +206,19 @@ searchCity.addEventListener('submit', displayWeather);
 
   }
 //TODO: add spotify search query
-function displayTracks(){
+function displayTracks(tracksContainer){
 for (let i = 0; i < 5; i++) {
   var j = i+1
   var track = document.createElement('h4')
   track.textContent = 'Track '+(j);
   console.log('Track '+(j));
   console.log(track.textContent);
-  //$(".tracks").text(track.textContent);
-  //tracksContainer.append(track.textContent);
+  $(".tracks").text(track.textContent);
+  tracksContainer.text(track.textContent);
 }
 }
 
 getToken();
-displayTracks();
+displayTracks(tracksContainer);
 console.log(spotToken);
  
