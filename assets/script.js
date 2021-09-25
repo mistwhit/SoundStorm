@@ -180,10 +180,10 @@ fetch('https://accounts.spotify.com/api/token', {
     //build track query
     //TODO Build dynamic fetch URL
  //var trackURL = 
- fetch('https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT',{
+ fetch('https://api.spotify.com/v1/audio-features/3n3Ppam7vgaVa1iaRUc9Lp',{
    method: 'GET',
    headers: {
-    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    'Content-Type': 'application/json',
     'Accept': 'application/json',
     'Authorization': 'Bearer '+authToken
    },
