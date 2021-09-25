@@ -1,4 +1,4 @@
-// This is our API key
+// This is our Weather API key
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
 // Here we are building the URL we need to query the database
