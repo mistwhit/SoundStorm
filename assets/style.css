@@ -107,6 +107,12 @@ input {
   min-width: 750px;
 }
 
+@media screen and (max-width: 600px) {
+  .weather, .music {
+    min-width: 250px;
+  }
+}
+
 /* Weather Icon */
 .city-ico {
   background-color: var(--light);
